@@ -10,11 +10,11 @@ let number = 10;
 class Main extends Component {
 
     state = {
-        ...this.getInitialState(number)
-    };
 
+        ...this.getInitialState(this.props.totalQuestions ||number)
+    };
     static propTypes = {
-        totalQuestions: PropTypes.number.isRequired
+        /*totalQuestions: PropTypes.number.isRequired*/
     };
 
     getInitialState(totalQuestions) {
@@ -42,11 +42,12 @@ class Main extends Component {
     handleAnswerClick = (index) => (e) => {
         const {questions, step, userAnswers} = this.state;
         const isCorrect = questions[0].correct === index;
+        console.log(step);
         const currentStep = step - 1;
         const time = userAnswers[currentStep].time;
 
         if (isCorrect && e.target.nodeName === 'LI') {
-            // Prevent other answers from being clicked after correct answer is clicked
+
             e.target.parentNode.style.pointerEvents = 'none';
 
             e.target.classList.add('right');
