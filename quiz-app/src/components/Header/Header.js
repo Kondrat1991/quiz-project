@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link, NavLink, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink, Switch } from "react-router-dom";
 
 import './Header.css';
-import Quiz from "../Quiz/Quiz";
 import Main from "../Main";
 import Welcome from "../Welcome/Welcome";
+import QuizList from "../QuizList/QuizList";
 
 class Header extends Component {
   render() {
@@ -18,7 +18,7 @@ class Header extends Component {
             <ul className="navbar-nav mr-auto">
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="main">Quize</NavLink>
+                <NavLink className="nav-link" to="/quiz">Quize</NavLink>
               </li>
 
               <li className="nav-item">
@@ -45,10 +45,7 @@ class Header extends Component {
 
         <Switch>
           <Route exact path="/" component={Welcome} />
-          <Route path="/quiz" component={Quiz} />
-          <Route path="/main" component={Main} />
-
-
+          <Route path="/quiz" component={QuizList} />
         </Switch>
 
       </Router>

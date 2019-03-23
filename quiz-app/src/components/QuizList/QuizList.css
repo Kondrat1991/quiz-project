@@ -1,0 +1,24 @@
+.quizeList{
+  top: 40%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateY(-40%);
+}
+
+.quizeList .quiz-field {
+  width: 30%;
+  margin: 15px 0;
+}
+
+.quizeList .quiz-btn {
+  width: 30%;
+  border: 1px solid #e7eaf6;
+  transition: .4s;
+}
+
+.quizeList .quiz-btn:hover {
+  width: 40%;
+  background-color: #e7eaf6;
+  color: #113f67;
+}
