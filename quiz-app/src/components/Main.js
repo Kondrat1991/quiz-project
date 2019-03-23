@@ -6,9 +6,13 @@ import Results from './Results';
 import randomQuestions from './helpers/random-questions';
 import QUESTION_DATA from './quiz-data';
 
+
+
+let number = 10;
 class Main extends Component {
+
     state = {
-        ...this.getInitialState(this.props.totalQuestions)
+        ...this.getInitialState(number)
     };
 
     static propTypes = {

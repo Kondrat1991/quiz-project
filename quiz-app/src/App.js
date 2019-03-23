@@ -14,7 +14,7 @@ class App extends Component {
         <Router>
       <div className="App">
         <Header />
-        <Main totalQuestions={3} />,
+
       </div>
         </Router>
     );

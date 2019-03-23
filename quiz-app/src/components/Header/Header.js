@@ -46,7 +46,6 @@ class Header extends Component {
         <Switch>
           <Route exact path="/" component={Welcome} />
           <Route path="/quiz" component={Quiz} />
-          <Route path="/quiz" component={Quiz} />
           <Route path="/main" component={Main} />
 
 
