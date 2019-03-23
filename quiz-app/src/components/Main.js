@@ -44,7 +44,7 @@ class Main extends Component {
         const time = userAnswers[currentStep].time;
 
         if (isCorrect && e.target.nodeName === 'LI') {
-            // Prevent other answers from being clicked after correct answer is clicked
+
             e.target.parentNode.style.pointerEvents = 'none';
 
             e.target.classList.add('right');
