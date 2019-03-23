@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link, NavLink, Switch } from "react-rou
 
 import './Header.css';
 import Quiz from "../Quiz/Quiz";
+import Main from "../Main";
 import Welcome from "../Welcome/Welcome";
 
 class Header extends Component {
@@ -17,7 +18,7 @@ class Header extends Component {
             <ul className="navbar-nav mr-auto">
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="quiz">Quize</NavLink>
+                <NavLink className="nav-link" to="main">Quize</NavLink>
               </li>
 
               <li className="nav-item">
@@ -45,6 +46,10 @@ class Header extends Component {
         <Switch>
           <Route exact path="/" component={Welcome} />
           <Route path="/quiz" component={Quiz} />
+          <Route path="/quiz" component={Quiz} />
+          <Route path="/main" component={Main} />
+
+
         </Switch>
 
       </Router>
